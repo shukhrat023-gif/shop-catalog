@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore — Каталог товаров</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">Tech<span>Store</span></div>
+      
+      <input type="text" id="search-input" class="search-input" placeholder="Поиск по названию или бренду...">
+      
+      <button id="cart-btn" class="cart-btn">
+        🛒 Корзина (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <!-- Сюда JS автоматически подставит реальные категории из вашего MockAPI -->
+  <nav class="categories-bar">
+    <div id="categories-list" class="container categories-list"></div>
+  </nav>
+
+  <main class="container">
+    <div id="products-grid" class="products-grid"></div>
+  </main>
+
+  <!-- Модальное окно корзины -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Ваша корзина</h2>
+        <button id="close-cart" class="close-btn">&times;</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="modal-footer">
+        <div class="total-price">Итого: $<span id="cart-total">0</span></div>
+        <button id="checkout-btn" class="checkout-btn">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
